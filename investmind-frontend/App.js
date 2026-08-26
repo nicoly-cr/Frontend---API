@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Importações dos componentes
 import HomeScreen from './src/screens/HomeScreen';
-import AlertsScreen from './src/screens/AlertsScreen';
+import AlertScreen from './src/screens/AlertScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export default function App() {
         />
         <Tab.Screen 
           name="Alertas" 
-          component={AlertsScreen} 
+          component={AlertScreen} 
           options={{ tabBarLabel: 'Alertas' }}
         />
       </Tab.Navigator>

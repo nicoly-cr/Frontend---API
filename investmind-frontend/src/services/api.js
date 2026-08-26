@@ -1,13 +1,13 @@
 // Emulador Android: http://10.0.2.2:8000/api
 // Celular Físico: http://SEU_IP_LOCAL:8000/api
 
-export const API_BASE_URL = 'http://localhost:8000/api';
+export const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
 // Service de Cotações
 export const buscarCotacao = async (ticker) => {
     try {
         // GET
-        const response = await fetch(`${API_BASE_URL}/cotacao?ticker=$ticker}`);
+        const response = await fetch(`${API_BASE_URL}/cotacao?ticker=${ticker}`);
         const data = await response.json();
         if(data.results && data.results.length > 0) {
             return data.results[0];
